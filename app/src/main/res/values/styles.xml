@@ -2,13 +2,11 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">#3498db</item>
-        <item name="colorPrimaryDark">#2F89C5</item>
-        <item name="android:textColorSecondary">@color/dark_blue</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorSecondary">@color/darkBlue</item>
         <item name="android:textColorPrimary">#ffffff</item>
-        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textColor">@color/darkBlue</item>
     </style>
-
-    <color name="dark_blue">#103c65</color>
 
 </resources>

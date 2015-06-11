@@ -5,8 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -45,25 +44,19 @@ public class AppsModel extends BaseAdapter {
             view = inflater.inflate(R.layout.app_info_delegate, viewGroup, false);
             holder = new ViewHolder();
 
-            holder.button = (Button) view.findViewById(R.id.button);
+            holder.text = (TextView) view.findViewById(R.id.text);
 
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();
         }
 
-        holder.button.setText(appInfo.getTitle());
-
-        holder.button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(viewGroup.getContext(), appInfo.getPackageName(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.text.setText(appInfo.getTitle());
 
         return view;
     }
 
     static class ViewHolder {
-        public Button button;
+        public TextView text;
     }
 }
